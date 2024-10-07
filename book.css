@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox for aligning collections */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* Adjust spacing between collections */
+    margin: 100px;
+    margin-top: 100px;
+}
+
+.collection1,
+.collection2,
+.collection4,
+.collection3 {
+    position: relative;
+    max-width: 35%;
+    height: 300px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    /* Add space below each collection for the description */
+}
+
+.small,
+.small2,
+.small4,
+.small3 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.smallslide1,
+.smallslide2,
+.smallslide4,
+.smallslide3 {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling the description section under each collection */
+.description {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.description h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.description p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.book-now {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}

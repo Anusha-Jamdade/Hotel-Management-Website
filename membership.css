@@ -1,0 +1,46 @@
+.line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 50;
+    font-size: 40px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.line-text::before,
+.line-text::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000000;
+    margin: 0 60px;
+    align-items: center;
+}
+
+#para1 {
+
+    width: 620px;
+    max-width: 100%;
+    line-height: 1.3;
+    text-align: center;
+    /* Adjust line height for readability */
+    margin: 20px auto;
+    /* Center it horizontally on the page */
+    /* text-align: justify; */
+    /* Justify the text to align both left and right */
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.dining-image1 {
+
+    display: flex;
+}
+
+.para2 {
+
+    width: 40px;
+}

@@ -1,29 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crystal Bay</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
+
 <body>
     <header>
-        <h1>TAJ</h1>
+        <h1>Crystal Bay</h1>
     </header>
     <nav>
         <ul class="area">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Destinations</a></li>
-            <li><a href="#">Dining</a></li>
-            <li><a href="#">Offers</a></li>
-            <li><a href="#">Memberships</a></li>
-            <li><a href="#">Contact</a></li>
-            <li id="login_button"><a href="#">Login</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="offers.html">Offers</a></li>
+            <li><a href="membership.html">Memberships</a></li>
+            <li><a href="contact.html">Events</a></li>
+
+            <!-- Login Button -->
+            <li><button class="btn" onclick="window.location.href='login.html'" id="login_button">Login</button> </li>
+
+            <!-- Sign-Up Button -->
+            <li><button class="btn" onclick="window.location.href='signup.html'">Sign Up</button></li>
+
+            <!-- <li ><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li> -->
 
         </ul>
     </nav>
     <main>
+        <form action="#" method="post" onsubmit="bookRoom(event)" class="booking-section">
+            <!-- Select Branch -->
+            <div class="form-bookastay">
+                <label id="bookstay_label" for="branch">Select a Hotel</label>
+                <select id="branch" name="branch" required>
+                    <option value="" disabled selected>Select a branch</option>
+                    <option value="branch1">HotelA</option>
+                    <option value="branch2">HotelB</option>
+                    <option value="branch3">HotelC</option>
+                </select>
+                <!-- Availability message -->
+                <p id="availability-message"></p>
+            </div>
+
+            <!-- Date Selection -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="bookstay_label" for="checkin">Check-In Date</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label id="bookstay_label" for="checkout">Check-Out Date</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+
+            <!-- Room and Guest Selection -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label id="bookstay_label" for="rooms">Number of Rooms</label>
+                    <input type="number" id="rooms" name="rooms" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label id="bookstay_label" for="children">Number of Children</label>
+                    <input type="number" id="children" name="children" min="0" value="0" required>
+                </div>
+                <div class="form-group">
+                    <label id="bookstay_label" for="adults">Number of Adults</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" class="btn-submit" value="Book">
+        </form>
+        </section>
+
+        <section class="homepage-section">
+            <!-- signature dining -->
+            <div class="container">
+                <h1>SIGNATURE DINING</h1>
+                <div class="signature-intro">
+                    <p>Embark on a journey of exquisite experiences, encompassing
+                        impeccable service, sophisticated ambience and masterful culinary
+                        artistry.
+                    </p>
+                    <a href="#" class="explore-button">EXPLORE</a>
+                </div>
+
+                <div class="dining-options">
+                    <div class="option">
+                        <img src="path/to/your/image1.jpg" alt="Celebrated Chefs">
+                        <h2>CELEBRATED CHEFS</h2>
+                        <p>A distinguished roster of world-class talent embodying culinary excellence
+                            with expertise, creativity and precision.
+                        </p>
+                    </div>
+
+                    <div class="option">
+                        <img src="path/to/your/image2.jpg" alt="Legendary Restaurants">
+                        <h2>LEGENDARY RESTAURANTS</h2>
+                        <p>A collection of restaurants recognized for unparalleled dining experiences
+                            showcasing culinary prowess and attentive service.
+                        </p>
+                    </div>
+
+                    <div class="option">
+                        <img src="path/to/your/image3.jpg" alt="Signature Recipes">
+                        <h2>SIGNATURE RECIPES</h2>
+                        <p>Culinary mastery shines as each dish highlights a medley of flavours and
+                            textures for an unforgettable dining experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="homepage-imgs">
+
+                <img src="hotelroom1.jpg" alt="hotel room">
+
+                <p class="homepage-imgs-text">TEXT ABT HOTEL ROOM</p>
+
+            </div>
+
+            <div class="homepage-imgs">
+
+                <img src="hotelroom1.jpg" alt="hotel room">
+
+                <p class="homepage-imgs-text">TEXT ABT HOTEL ROOM</p>
+
+            </div>
+
+            <div class="homepage-imgs">
+
+                <img src="hotelroom1.jpg" alt="hotel room">
+
+                <p class="homepage-imgs-text">TEXT ABT HOTEL ROOM</p>
+
+            </div>
+        </section>
+
         <section>
             <h2>About Us</h2>
         </section>
@@ -31,5 +151,8 @@
     <footer>
         <p>&copy; Crystal Bay</p>
     </footer>
+
+    <script src="homepage.js"></script>
 </body>
+
 </html>
